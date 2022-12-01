@@ -17,7 +17,10 @@ public class AdapterT extends BaseAdapter {
     private int layout;
     private List<Thi> arraylist;
 
-    public AdapterT(MainActivity mainActivity, int list_item, ArrayList<Thi> arraylist) {
+    public AdapterT(Context context, int layout, ArrayList<Thi> arraylist) {
+        this.context = context;
+        this.layout = layout;
+        this.arraylist = arraylist;
     }
 
     @Override
@@ -36,7 +39,7 @@ public class AdapterT extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(layout, null);
 

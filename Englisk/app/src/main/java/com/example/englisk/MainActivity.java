@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         arraylist = new ArrayList<>();
         arraylist.add(new Thi("hien tai don","S + V inf"));
         arraylist.add(new Thi("qua khu don","S + V2"));
+        arraylist.add(new Thi("hien tai tiep dien","S + to be + V ing"));
+        arraylist.add(new Thi("hien tai hoàn thanh","S + have/ has + V3"));
 
        adapter = new AdapterT( MainActivity.this,R.layout.layou_thi, arraylist );
         listView.setAdapter(adapter);
